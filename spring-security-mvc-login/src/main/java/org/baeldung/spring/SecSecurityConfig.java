@@ -38,7 +38,7 @@ public class SecSecurityConfig extends WebSecurityConfigurerAdapter {
         .authorizeRequests()
         .antMatchers("/anonymous*").anonymous()
         .antMatchers("/login*").permitAll()
-        .anyRequest().authenticated()
+        .antMatchers("/static*").permitAll()
         .and()
         .formLogin()
         .loginPage("/login.html")

@@ -38,7 +38,7 @@ public class ChannelSecSecurityConfig extends WebSecurityConfigurerAdapter {
         .authorizeRequests()
         .antMatchers("/anonymous*").anonymous()
         .antMatchers("/login*").permitAll()
-        .anyRequest().authenticated()
+        .antMatchers("/static*").permitAll()
         .and()
         .requiresChannel()
         .antMatchers("/login*", "/perform_login").requiresSecure()
