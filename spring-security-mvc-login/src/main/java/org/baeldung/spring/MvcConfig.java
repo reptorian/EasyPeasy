@@ -2,6 +2,8 @@ package org.baeldung.spring;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -28,6 +30,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 
         registry.addViewController("/login.html");
         registry.addViewController("/homepage.html");
+        
     }
 
     @Bean

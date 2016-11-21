@@ -16,7 +16,9 @@
 		<br/>
 	</security:authorize>
 
-	<a href="<c:url value="/perform_logout" />">Logout</a>
-	
+	<a href="<c:url value="/login.html" />">Logout</a>
+	<p>11111</p>
+	<p>${name}</p>
+	<p>11111</p>
 </body>
 </html>

@@ -74,8 +74,8 @@
 	                            </a>
 	                        </div>
 	                        <form name='f' action="perform_login" method='POST' accept-charset=utf-8 >
-			                	<input class="form-control" type="text" placeholder="Username"  value=''>
-			                	<input class="form-control" type="password" placeholder="Password">
+			                	<input class="form-control" type="text" placeholder="Username" name='username'  value=''>
+			                	<input class="form-control" type="password" name = 'password' placeholder="Password">
 			                	<div class="action">
 			                		<input name="submit" class="btn btn-primary signup" type="submit" value="submit" />
 			                    	<!-- <a class="btn btn-primary signup" href="index.html">Login</a> -->

@@ -27,7 +27,7 @@ public class ChannelSecSecurityConfig extends WebSecurityConfigurerAdapter {
         .withUser("user1").password("user1Pass").roles("USER")
         .and()
         .withUser("user2").password("user2Pass").roles("USER");
-        // @formatter:on
+        // @formatter:on        
     }
 
     @Override
@@ -39,6 +39,7 @@ public class ChannelSecSecurityConfig extends WebSecurityConfigurerAdapter {
         .antMatchers("/anonymous*").anonymous()
         .antMatchers("/login*").permitAll()
         .antMatchers("/static*").permitAll()
+       //.antMatchers("/menu*").hasRole(role)
         .and()
         .requiresChannel()
         .antMatchers("/login*", "/perform_login").requiresSecure()
