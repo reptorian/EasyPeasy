@@ -55,9 +55,9 @@
 		  		<div class="col-md-4 col-md-offset-4">
 		  			
 		  			<div>
-	                    <a href="#">
+	                    <a href="<c:url value="/homepage.html" />">
 	                       <span>
-	                           <img id="easypeasy-logo" src="images/logo.png" alt="logo">
+	                           <img id="easypeasy-logo" src="<c:url value="/static/images/logo.png" />" alt="logo">
 	                       </span>
 	                    </a>
 					</div>
@@ -81,7 +81,7 @@
 				<br/>
 				</security:authorize>
 
-				<a href="<c:url value="/login.html" />">Logout</a>
+				
 				<p>11111</p>
 				<p>${name}</p>
 				<p>11111</p>
@@ -95,7 +95,7 @@
          <div class="container">
          
             <div class="copy text-center">
-               Copyright 2016 <a href='#'>Grzegorz Wierzejski, Aleksandra Dyszewska, </a>
+               Copyright 2016 <a href='#'>Grzegorz Wierzejski, Aleksandra Dyszewska,  Kolia Epov</a>
             </div>
             
          </div>
