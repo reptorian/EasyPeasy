@@ -26,7 +26,7 @@
 					<div class="container-fluid">
 						<ul class="nav navbar-nav">
 							<li  class="active"><a href="<c:url value="/homepage.html" />">Home</a></li>
-							<li><a href="#">Menu restauracji</a></li>
+							<li><a href="<c:url value="/menu.html" />">Menu restauracji</a></li>
 							<li><a href="#">Kontakt</a></li>
 							<li><a href="<c:url value="/login.html" />">Log in</a></li>
 						</ul>
@@ -44,7 +44,7 @@
                 <ul class="nav">
                     
                     <li class="current"><a href="<c:url value="/homepage.html" />"><i class="glyphicon glyphicon-home"></i> Strona glowna</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Menu</a></li>
+                    <li><a href="<c:url value="/menu.html" />"><i class="glyphicon glyphicon-list-alt"></i> Menu</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-earphone"></i> Kontakt</a></li>
                 </ul>
              </div>

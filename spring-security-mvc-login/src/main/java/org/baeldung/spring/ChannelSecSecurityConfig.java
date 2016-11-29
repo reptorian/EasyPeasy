@@ -39,7 +39,7 @@ public class ChannelSecSecurityConfig extends WebSecurityConfigurerAdapter {
         .antMatchers("/anonymous*").anonymous()
         .antMatchers("/login*").permitAll()
         .antMatchers("/static*").permitAll()
-        .antMatchers("/admin*").permitAll()
+        //.antMatchers("/admin*").permitAll()
        //.antMatchers("/menu*").hasRole(role)
         .and()
         .requiresChannel()

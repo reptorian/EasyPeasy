@@ -67,7 +67,7 @@
 			
 			
 		  	<div class="content-box-large">
-				<h3>Lista Dań</h3>
+				<h3>Lista DaÅ</h3>
 			</div>
 			
 			<!--Wzor dania-->
@@ -85,8 +85,8 @@
 					<!--Opis Dania-->
 					<div class="col-sm-6">
 						<p>
-							Przecudownie orzeźwiająca mieszanina esencji z ogórków kiszonych i wody po pierogach
-							od razu postawi cię na nogi
+							Przecudownie orzeźwiająca mieszanina esencji z ogÃ³rkÃ³w kiszonych i wody po pierogach
+							od razu postawi ciÄ na nogi
 						</p>
 					</div>
 				</div>

@@ -47,10 +47,10 @@
 				<nav class="navbar navbar-default">
 					<div class="container-fluid">
 						<ul class="nav navbar-nav">
-							<li><a href="<c:url value="/homepage.html" />">Home</a></li>
-							<li><a href="#">Menu restauracji</a></li>
+							<li><a href="<c:url value="homepage.html" />">Home</a></li>
+							<li><a href="<c:url value="menu.html" />">Menu restauracji</a></li>
 							<li><a href="#">Kontakt</a></li>
-							<li class="active"><a href="<c:url value="/login.html" />">Log in</a></li>
+							<li class="active"><a href="<c:url value="login.html" />">Log in</a></li>
 						</ul>
 					</div>
 				</nav>
@@ -81,7 +81,13 @@
 			                    	<!-- <a class="btn btn-primary signup" href="index.html">Login</a> -->
 			                    
 			                	</div> 
-			                </form>               
+			                </form>
+			                <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
+      <font color="red">
+        Your login attempt was not successful due to <br/><br/>
+        <c:out value="${SPRING_SECURITY_LAST_EXCEPTION.message}"/>.
+      </font>
+</c:if>              
 			            </div>
 			        </div>
 
