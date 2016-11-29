@@ -5,7 +5,7 @@
 <html>
   <head>
     <title>EasyPEAsy - Admin Panel</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">	
     <!-- Bootstrap -->
     <link href="<c:url value="/static/css/styles.css" />" rel="stylesheet">
     <link href="<c:url value="/static/bootstrap/css/bootstrap.min.css" />" rel="stylesheet">
