@@ -25,7 +25,7 @@
 	             <nav class="navbar navbar-default">
 					<div class="container-fluid">
 						<ul class="nav navbar-nav">
-							<li  class="active"><a href="<c:url value="/homepage.html" />">Home</a></li>
+							<li  class="active"><a href="<c:url value="/admin.html" />">Admin Panel</a></li>
 							<li><a href="#">Menu restauracji</a></li>
 							<li><a href="#">Kontakt</a></li>
 							<li><a href="<c:url value="/homepage.html" />">Log out</a></li>
@@ -43,7 +43,7 @@
 		  	<div class="sidebar content-box" style="display: block;">
                 <ul class="nav">
                     
-                    <li class="current"><a href="<c:url value="/homepagea.html" />"><i class="glyphicon glyphicon-home"></i> Strona główna</a></li>
+                    <li class="current"><a href="<c:url value="/admin.html" />"><i class="glyphicon glyphicon-home"></i> Strona główna</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Edytuj menu</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-earphone"></i> Zarządzaj Czasem</a></li>
                 </ul>
