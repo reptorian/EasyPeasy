@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>EasyPEAsy - Log in</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+	 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
     <!-- Bootstrap -->
     <link href="<c:url value="/static/css/styles.css" />" rel="stylesheet">
     <link href="<c:url value="/static/bootstrap/css/bootstrap.min.css" />" rel="stylesheet">
@@ -81,16 +81,9 @@
 			                    	<!-- <a class="btn btn-primary signup" href="index.html">Login</a> -->
 			                	</div> 
 			                </form>
-			                <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
-      <font color="red">
-        Your login attempt was not successful due to <br/><br/>
-        <c:out value="${SPRING_SECURITY_LAST_EXCEPTION.message}"/>.
-      </font>
-</c:if>              
-								<!--ERROR MSG-->
-								<div class="error">
-									<b>NiezgodnoÅÄ loginu i hasÅa</b>
-								</div>
+			                <c:if test="${not empty param.error}">
+    <div class ="error"> Niezgodność loginu i hasła </div>
+    </c:if>  
 			            </div>
 			        </div>
 
