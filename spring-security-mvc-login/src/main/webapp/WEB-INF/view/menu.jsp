@@ -4,7 +4,8 @@
 <html>
 <head>
 <title>EasyPEAsy - Menu</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+
+	 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 	<!--Bootstrap i css-->
     <link href="<c:url value="/static/css/styles.css" />" rel="stylesheet">
     <link href="<c:url value="/static/bootstrap/css/bootstrap.min.css" />" rel="stylesheet">
@@ -67,7 +68,7 @@
 			
 			
 		  	<div class="content-box-large">
-				<h3>Lista DaÅ</h3>
+				<h3>Lista Dań</h3>
 			</div>
 			
 			<!--Wzor dania-->
@@ -75,7 +76,7 @@
 			
 				<div class="panel-heading">
 					<!--Tytul-->
-					<div class="panel-title">Koktail z wody po pierogach</div>	
+					<div class="panel-title">Koktajl z wody po pierogach</div>	
 				</div>
 				<div class="panel-body">
 					<!--Zdjecie dania-->
@@ -85,8 +86,8 @@
 					<!--Opis Dania-->
 					<div class="col-sm-6">
 						<p>
-							Przecudownie orzeźwiająca mieszanina esencji z ogÃ³rkÃ³w kiszonych i wody po pierogach
-							od razu postawi ciÄ na nogi
+							Przecudownie orzeźwiająca mieszanina esencji z ogórków kiszonych i wody po pierogach
+							od razu postawi Cię na nogi
 						</p>
 					</div>
 				</div>
@@ -101,7 +102,7 @@
          <div class="container">
          
             <div class="copy text-center">
-               Copyright 2016 <a href='#'>Grzegorz Wierzejski, Aleksandra Dyszewska,  Kolia Epov</a>
+               Copyright 2016 <a href='#'>Grzegorz Wierzejski, Aleksandra Dyszewska, Kolia Epov</a>
             </div>
             
          </div>

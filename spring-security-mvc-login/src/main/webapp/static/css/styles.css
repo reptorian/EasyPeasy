@@ -591,6 +591,13 @@ body {
 	padding:20px;
 }
 
+.error{
+	padding:1em;
+	margin:2em;
+	background-color:#d9534f;
+	color:#fff;
+}
+
 #easypeasy-logo{
 	width:100%;
 	margin-bottom:2em;

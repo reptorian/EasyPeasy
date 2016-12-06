@@ -26,8 +26,7 @@
 					<div class="container-fluid">
 						<ul class="nav navbar-nav">
 							<li  class="active"><a href="<c:url value="/admin.html" />">Admin Panel</a></li>
-							<li><a href="<c:url value="/menu.html" />">Menu restauracji</a></li>
-							<li><a href="#">Kontakt</a></li>
+							<li><a href="<c:url value="" />">Edytuj Menu</a></li>
 							<li><a href="<c:url value="perform_logout" />">Log out</a></li>
 						</ul>
 					</div>
