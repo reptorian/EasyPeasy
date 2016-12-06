@@ -47,7 +47,6 @@
                     <li class="current"><a href="<c:url value="/admin.html" />"><i class="glyphicon glyphicon-home"></i> Admin panel</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Edytuj menu</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-earphone"></i> Zarządzaj Czasem</a></li>
-                    <li><a href="perform_logout"><i class="glyphicon glyphicon-earphone"></i> Wyloguj</a></li>
                 </ul>
              </div>
 		  </div>
