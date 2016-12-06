@@ -79,8 +79,11 @@
 			                	<div class="action">
 			                		<input name="submit" class="btn btn-primary signup" type="submit" value="submit" />
 			                    	<!-- <a class="btn btn-primary signup" href="index.html">Login</a> -->
-			                    
 			                	</div> 
+								<!--ERROR MSG-->
+								<div class="error">
+									<b>Niezgodność loginu i hasła</b>
+								</div>
 			                </form>               
 			            </div>
 			        </div>
