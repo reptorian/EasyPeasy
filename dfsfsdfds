@@ -1,0 +1,123 @@
+[33mcommit f8f47af2883f5548fd99813ec089410b3606855d[m
+Merge: cffb6b4 95ef1bf
+Author: Grzegorz Wierzejski <wierzejski.grzegorz@gmail.com>
+Date:   Tue Dec 6 09:59:29 2016 +0100
+
+    Naprawione Utf-8
+
+[33mcommit 95ef1bf9b36ca183688a2d9e584b8ba36dc5f356[m
+Author: alekdysz <alekdysz@wp.pl>
+Date:   Tue Dec 6 09:52:14 2016 +0100
+
+    dodano error message do login.jsp, zaktualizowano styles.css
+
+[33mcommit cffb6b4f62b52f62f5a1ecdb9c1a93a726b87ce6[m
+Merge: f8febfa c6c1c87
+Author: Grzegorz Wierzejski <wierzejski.grzegorz@gmail.com>
+Date:   Tue Nov 29 11:32:54 2016 +0100
+
+    Merge https://github.com/reptorian/EasyPeasy
+
+[33mcommit c6c1c87137b24eec129afb0cc7804d6989507b6a[m
+Author: alekdysz <alekdysz@wp.pl>
+Date:   Tue Nov 29 11:15:02 2016 +0100
+
+    Dodano utf-8 encoding filter do web.xml
+
+[33mcommit f8febfa660c07f44db82213b0f28e5d2d445767c[m
+Merge: ffc71ef aa21bc5
+Author: Grzegorz Wierzejski <wierzejski.grzegorz@gmail.com>
+Date:   Tue Nov 29 10:56:02 2016 +0100
+
+    Merge https://github.com/reptorian/EasyPeasy
+
+[33mcommit ffc71ef065beaababe1db22b7b966472b963c4c1[m
+Author: Grzegorz Wierzejski <wierzejski.grzegorz@gmail.com>
+Date:   Tue Nov 29 10:54:12 2016 +0100
+
+    Ustawiono wyswietlanie komunikatu przy blednym wpisaniu danych logowania
+
+[33mcommit aa21bc5a279a78a47f8406c26c9cbb27104457c6[m
+Author: alekdysz <alekdysz@wp.pl>
+Date:   Tue Nov 29 10:32:24 2016 +0100
+
+    dodano utf-8 do admin.jsp - polskie znaki powinny byc wczytywane poprawnie
+
+[33mcommit 3dbf32fb6ac2ea52f1f69a20c88824884aca5e3a[m
+Author: alekdysz <alekdysz@wp.pl>
+Date:   Tue Nov 29 10:03:59 2016 +0100
+
+    Dodano biblioteki do menu.jsp
+
+[33mcommit ece3b9032a6f56868e3880a8c62cf30f2cd22893[m
+Author: Grzegorz Wierzejski <wierzejski.grzegorz@gmail.com>
+Date:   Tue Nov 29 10:00:20 2016 +0100
+
+    Dodano menu
+
+[33mcommit d092a34f934b543a8b77f2d28dd07433e96d0cda[m
+Author: Grzegorz Wierzejski <wierzejski.grzegorz@gmail.com>
+Date:   Tue Nov 29 09:57:21 2016 +0100
+
+    Zmieniono przejscie z login page do admin panelu
+
+[33mcommit b644073d7361f76a72ac2662693dfb9b2e00707b[m
+Author: alekdysz <alekdysz@wp.pl>
+Date:   Tue Nov 22 11:02:17 2016 +0100
+
+    Dodano menu.jsp, update style.css
+
+[33mcommit 6632e09d9e3fc439a2c1ac2e421240316098769f[m
+Author: alekdysz <alekdysz@wp.pl>
+Date:   Tue Nov 22 10:04:56 2016 +0100
+
+    Dodano homepagea.jsp, usunieto odnosnik logoutu z contentu strony, podlinkowano logo prawidlowo do homepage
+
+[33mcommit f7388e7167e427cdd4caf59b1e2941b42e83eeeb[m
+Author: alekdysz <alekdysz@wp.pl>
+Date:   Mon Nov 21 17:56:14 2016 +0100
+
+    Dodano html i css do homepage.jsp, linki do sprawdzenia
+
+[33mcommit 4e224bfbc213ed5f2d60ecd34fcd4a86f5bf5985[m
+Author: Grzegorz Wierzejski <wierzejski.grzegorz@gmail.com>
+Date:   Mon Nov 21 12:15:01 2016 +0100
+
+    Dodalismy mozliwosc logowania i wylogowywania
+
+[33mcommit b66e0b3d67ac3120e44a98af8e068c0c7eb2a3d7[m
+Author: Grzegorz Wierzejski <wierzejski.grzegorz@gmail.com>
+Date:   Tue Nov 15 11:31:51 2016 +0100
+
+    Dodano .css
+
+[33mcommit 2828ccc2ccc9c72167903defec45c7cea57759f4[m
+Merge: 77116cf e9276fa
+Author: Grzegorz Wierzejski <wierzejski.grzegorz@gmail.com>
+Date:   Tue Nov 15 09:44:37 2016 +0100
+
+    Merge https://github.com/reptorian/EasyPeasy
+
+[33mcommit 77116cfc3488e0b26f4062e2ac3779a715e6d96f[m
+Author: Grzegorz Wierzejski <wierzejski.grzegorz@gmail.com>
+Date:   Tue Nov 15 09:43:04 2016 +0100
+
+    Dodalem projekt spring-security-mvc-login
+
+[33mcommit e9276fa307718279eb8026972ddffaafe7ca6c2f[m
+Author: alekdysz <alekdysz@wp.pl>
+Date:   Mon Nov 14 13:16:11 2016 +0100
+
+    Dodano html do repozytorium
+
+[33mcommit 968b97451c47772a7548e10bf7c9831a0e4d8104[m
+Author: Grzegorz Wierzejski <wierzejski.grzegorz@gmail.com>
+Date:   Mon Nov 14 11:45:44 2016 +0100
+
+    hehe
+
+[33mcommit ee65d83062ca14561879ab54d9cea35a561f6285[m
+Author: reptorian <wierzejski.grzegorz@gmail.com>
+Date:   Mon Nov 14 11:30:31 2016 +0100
+
+    Initial commit

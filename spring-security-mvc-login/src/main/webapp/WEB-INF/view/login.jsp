@@ -80,11 +80,17 @@
 			                		<input name="submit" class="btn btn-primary signup" type="submit" value="submit" />
 			                    	<!-- <a class="btn btn-primary signup" href="index.html">Login</a> -->
 			                	</div> 
+			                </form>
+			                <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
+      <font color="red">
+        Your login attempt was not successful due to <br/><br/>
+        <c:out value="${SPRING_SECURITY_LAST_EXCEPTION.message}"/>.
+      </font>
+</c:if>              
 								<!--ERROR MSG-->
 								<div class="error">
-									<b>Niezgodność loginu i hasła</b>
+									<b>NiezgodnoÅÄ loginu i hasÅa</b>
 								</div>
-			                </form>
 			            </div>
 			        </div>
 
