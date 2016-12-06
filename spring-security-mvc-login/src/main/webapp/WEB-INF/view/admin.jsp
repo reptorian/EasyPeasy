@@ -5,6 +5,7 @@
 <html>
   <head>
     <title>EasyPEAsy - Admin Panel</title>
+	 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">	
     <!-- Bootstrap -->
     <link href="<c:url value="/static/css/styles.css" />" rel="stylesheet">
@@ -27,7 +28,8 @@
 						<ul class="nav navbar-nav">
 							<li  class="active"><a href="<c:url value="/admin.html" />">Admin Panel</a></li>
 							<li><a href="<c:url value="" />">Edytuj Menu</a></li>
-							<li><a href="<c:url value="perform_logout" />">Log out</a></li>
+							<li><a href="<c:url value="" />">Zarządzaj czasem</a></li>
+							<li><a href="<c:url value="perform_logout" />">Wyloguj</a></li>
 						</ul>
 					</div>
 				</nav>
@@ -42,9 +44,10 @@
 		  	<div class="sidebar content-box" style="display: block;">
                 <ul class="nav">
                     
-                    <li class="current"><a href="<c:url value="/admin.html" />"><i class="glyphicon glyphicon-home"></i> Strona główna</a></li>
+                    <li class="current"><a href="<c:url value="/admin.html" />"><i class="glyphicon glyphicon-home"></i> Admin panel</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Edytuj menu</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-earphone"></i> Zarządzaj Czasem</a></li>
+                    <li><a href="perform_logout"><i class="glyphicon glyphicon-earphone"></i> Wyloguj</a></li>
                 </ul>
              </div>
 		  </div>
