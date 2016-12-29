@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"
+	charset="UTF-8">
+<title>EasyPEAsy - Log in</title>
+
+<link href="static/css/styles.css" rel="stylesheet">
+<link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<!-- 
+<body>
+	<h1>Login</h1>
+	<form name='f' action="perform_login" method='POST'>
+		<table>
+			<tr>
+				<td>User:</td>
+				<td><input type='text' name='username' value=''></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type='password' name='password' /></td>
+			</tr>
+			<tr>
+				<td><input name="submit" type="submit" value="submit" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+-->
+<body class="login-bg">
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="/">Home</a></li>
+								<li><a href="menu.html">Menu restauracji</a></li>
+								<li><a href="#">Kontakt</a></li>
+								<li><a href="/login">Log in</a></li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="page-content container">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<div class="login-wrapper">
+					<div class="box">
+						<div class="content-wrap">
+							<div>
+								<a href="../."> <span> <img id="easypeasy-logo"
+										src="static/images/logo.png" alt="logo">
+								</span>
+								</a>
+							</div>
+							<form name='f' action="perform_login" method='POST'
+								accept-charset=utf-8>
+								<input class="form-control" type="text" placeholder="Username"
+									name='username' value=''> <input class="form-control"
+									type="password" name='password' placeholder="Password">
+								<div class="action">
+									<input name="submit" class="btn btn-primary signup"
+										type="submit" value="submit" />
+									<!-- <a class="btn btn-primary signup" href="index.html">Login</a> -->
+								</div>
+								<ul>
+									<li th:each="err : ${#fields.errors('all')}" th:text="${err}" />
+								</ul>
+							</form>
+						</div>
+					</div>
+
+					<div class="already">
+						<p>Don't have an account yet?</p>
+						<a href="signup.html">Sign Up</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="static/bootstrap/js/bootstrap.min.js"></script>
+	<script src="static/js/custom.js" /></script>
+</body>
+
+</html>

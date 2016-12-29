@@ -1,54 +1,50 @@
-package org.baeldung.spring;
+package com.baeldung.thymeleaf.config;
 
-import org.baeldung.security.CustomLogoutSuccessHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 
 @Configuration
-// @ImportResource({ "classpath:channelWebSecurityConfig.xml" })
 @EnableWebSecurity
-@Profile("https")
-public class ChannelSecSecurityConfig extends WebSecurityConfigurerAdapter {
+@EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
+public class WebMVCSecurity extends WebSecurityConfigurerAdapter {
 
-    public ChannelSecSecurityConfig() {
-        super();
-    }
+	@Bean
+	@Override
+	public AuthenticationManager authenticationManagerBean() throws Exception {
+		return super.authenticationManagerBean();
+	}
 
-    @Override
-    protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
-        // @formatter:off
-        auth.inMemoryAuthentication()
-        .withUser("user1").password("user1Pass").roles("USER")
-        .and()
-        .withUser("user2").password("user2Pass").roles("USER");
-        // @formatter:on        
-    }
+	public WebMVCSecurity() {
+		super();
+	}
 
-    @Override
-    protected void configure(final HttpSecurity http) throws Exception {
-        // @formatter:off
-        http
+	@Override
+	protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
+		auth.inMemoryAuthentication().withUser("user1").password("user1Pass").roles("USER").and().withUser("user2")
+				.password("user2Pass").roles("USER");
+	}
+
+	@Override
+	public void configure(final WebSecurity web) throws Exception {
+		web.ignoring().antMatchers("/resources/**");
+	}
+
+	@Override
+	protected void configure(final HttpSecurity http) throws Exception {
+		http
         .csrf().disable()
         .authorizeRequests()
         .antMatchers("/anonymous*").anonymous()
         .antMatchers("/login*").permitAll()
         .antMatchers("/static*").permitAll()
-        //.antMatchers("/admin*").permitAll()
-       //.antMatchers("/menu*").hasRole(role)
-        .and()
-        .requiresChannel()
-        .antMatchers("/login*", "/perform_login").requiresSecure()
-        .anyRequest().requiresInsecure()
-        .and()
-        .sessionManagement()
-        .sessionFixation()
-        .none()
         .and()
         .formLogin()
         .loginPage("/login.html")
@@ -60,10 +56,9 @@ public class ChannelSecSecurityConfig extends WebSecurityConfigurerAdapter {
         .logoutUrl("/perform_logout")
         .deleteCookies("JSESSIONID")
         .logoutSuccessHandler(logoutSuccessHandler());
-        // @formatter:on
-    }
-
-    @Bean
+	}
+	
+	@Bean
     public LogoutSuccessHandler logoutSuccessHandler() {
         return new CustomLogoutSuccessHandler();
     }
