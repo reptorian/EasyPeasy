@@ -27,7 +27,8 @@
 								<li class="active"><a href="/">Home</a></li>
 								<li><a href="menu.html">Menu restauracji</a></li>
 								<li><a href="#">Kontakt</a></li>
-								<li><a href="/login">Log in</a></li>
+								<li sec:authorize="isAnonymous()"><a href="/login">Log in</a></li>
+								<li sec:authorize="isAuthenticated()"><a href="/perform_logout">Log out</a></li>
 							</ul>
 						</div>
 					</nav>
@@ -78,7 +79,6 @@
 						only shown to administrators.</div>
 					<div sec:authorize="hasRole('ROLE_USER')">This content is
 						only shown to users.</div>
-
 
 					<p>11111</p>
 					<p th:text="${name}"></p>
