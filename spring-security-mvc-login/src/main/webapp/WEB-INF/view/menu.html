@@ -72,33 +72,72 @@
 		  		</div>
 		  	</div>
 			
-			
-		  	<div class="content-box-large">
-				<h3>Lista Dań</h3>
-			</div>
-			
-			<!--Wzor dania-->
-			<div class="content-box-large">
-			
-				<div class="panel-heading">
-					<!--Tytul-->
-					<div class="panel-title">Koktajl z wody po pierogach</div>	
+			<div sec:authorize="isAnonymous()">
+				<div class="content-box-large">
+					<h3>Lista Dań</h3>
 				</div>
-				<div class="panel-body">
-					<!--Zdjecie dania-->
-					<div class="col-sm-6">
-						<img class=""  src="static/images/test.jpg" alt="Zdjecie">
+				
+				<!--Wzor dania-->
+				<div class="content-box-large">
+				
+					<div class="panel-heading">
+						<!--Tytul-->
+						<div class="panel-title">Koktajl z wody po pierogach</div>	
 					</div>
-					<!--Opis Dania-->
-					<div class="col-sm-6">
-						<p>
-							Przecudownie orzeźwiająca mieszanina esencji z ogórków kiszonych i wody po pierogach
-							od razu postawi Cię na nogi
-						</p>
+					<div class="panel-body">
+						<!--Zdjecie dania-->
+						<div class="col-sm-6">
+							<img class=""  src="static/images/test.jpg" alt="Zdjecie">
+						</div>
+						<!--Opis Dania-->
+						<div class="col-sm-6">
+							<p>
+								Przecudownie orzeźwiająca mieszanina esencji z ogórków kiszonych i wody po pierogach
+								od razu postawi Cię na nogi
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		
+			<div sec:authorize="isAuthenticated()">
+				<div class="content-box-large">
+					<h3>Edycja Dania</h3>
+				</div>
+				
+				<div class="content-box-large">
+					<div class="panel-heading">
+						<!--Tytul-->
+						<input class="form-control" placeholder="<TYTUL DANIA WCZYTANY Z BAZY DANYCH>" name="" value="#" type="text">
+					</div>
+					<div class="panel-body">
+						
+						<!--Zdjecie dania-->
+						<div class="col-sm-6">
+							<img class=""  src="static/images/test.jpg" alt="Zdjecie">
+							
+							<button type="submit" class="btn btn-primary">Zmień</button>
+						</div>
+						<!--Edycja Dania-->
+						<div class="col-sm-6">
+							
+							<textarea class="form-control" placeholder="<TXT Z BAZY DANYCH>" name="" value="#" type=""></textarea>
+							<hr>
+							<div class="row">
+								<div class="col-sm-6">
+									<input class="form-control" placeholder="<CZAS OCZEKIWANIA Z BAZY DANYCH>" name="" value="" type="text">
+								</div>
+								<div class="col-sm-6">
+									<input class="form-control" placeholder="<CENA Z BAZY DANYCH>" name="" value="" type="text">
+								</div>
+							</div>
+							<hr>
+							<button type="submit" class="btn btn-primary">Aktualizuj</button>
+						</div>	
+					</div>
+				</div>
+			
+			</div>
+			<!--END POST-->
 		  </div>
 		</div>
 		
