@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EasyPEAsy - Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"
+	charset="UTF-8">
+<!-- Bootstrap -->
+<link href="static/css/styles.css" rel="stylesheet">
+<link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<div class="header">
+	     <div class="container">
+	        <div class="row">
+	           <div class="col-md-5">
+	             <nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<ul class="nav navbar-nav">
+							<li sec:authorize="isAnonymous()"><a href="/">Home</a></li>
+							<li sec:authorize="isAnonymous()" class="active"><a href="/menu">Menu restauracji</a></li>
+							<li sec:authorize="isAnonymous()"><a href="/contact">Kontakt</a></li>
+							<li sec:authorize="isAuthenticated()"><a href="admin">Home</a></li>
+							<li sec:authorize="isAuthenticated()" class="active"><a href="/menu">Edytuj Menu</a></li>
+							<li sec:authorize="isAuthenticated()"><a href="/time">Zarządzaj Czasem</a></li>
+							<li sec:authorize="isAnonymous()"><a href="/login">Log in</a></li>
+							<li sec:authorize="isAuthenticated()"><a href="/perform_logout">Log out</a></li>
+						</ul>
+					</div>
+				</nav>
+	           </div>
+	        </div>
+	     </div>
+	</div>
+
+    <div class="page-content">
+    	<div class="row">
+		  <div class="col-md-2">
+		  	<div class="sidebar content-box" style="display: block;">
+                <ul class="nav">
+                    <li sec:authorize="isAuthenticated()"><a href="/admin"><i class="glyphicon glyphicon-home"></i> Admin panel</a></li>
+                    <li sec:authorize="isAuthenticated()" class="current"><a href="/menu"><i class="glyphicon glyphicon-list-alt"></i> Edytuj menu</a></li>
+					<li sec:authorize="isAuthenticated()"><a href="/time"><i class="glyphicon glyphicon-earphone"></i> Zarządzaj Czasem</a></li>
+					<li sec:authorize="isAnonymous()"><a href="/"><i
+								class="glyphicon glyphicon-home"></i> Strona glowna</a></li>
+						<li sec:authorize="isAnonymous()" class="current"><a href="/menu"><i
+								class="glyphicon glyphicon-list-alt"></i> Menu</a></li>
+						<li sec:authorize="isAnonymous()"><a href="/contact"><i class="glyphicon glyphicon-earphone"></i>
+								Kontakt</a></li>
+                </ul>
+             </div>
+		  </div>
+		  
+		  <div class="col-md-10">
+		  	<div class="row">
+		  		<div class="col-md-4 col-md-offset-4">
+		  			
+		  			<div>
+	                    <a href="/">
+	                       <span>
+	                           <img id="easypeasy-logo" src="static/images/logo.png" alt="logo">
+	                       </span>
+	                    </a>
+					</div>
+		  		</div>
+		  	</div>
+			
+			<div sec:authorize="isAnonymous()">
+				<div class="content-box-large">
+					<h3>Lista Dań</h3>
+				</div>
+				
+				<!--Wzor dania-->
+				<div class="content-box-large">
+				
+					<div class="panel-heading">
+						<!--Tytul-->
+						<div class="panel-title">Koktajl z wody po pierogach</div>
+					</div>
+					<div class="panel-body">
+						<!--Zdjecie dania-->
+						<div class="col-sm-6">
+							<img class=""  src="static/images/test.jpg" alt="Zdjecie">
+						</div>
+						<!--Opis Dania-->
+						<div class="col-sm-6">
+							<p>
+								Przecudownie orzeźwiająca mieszanina esencji z ogórków kiszonych i wody po pierogach
+								od razu postawi Cię na nogi
+							</p>
+							<p th:text="'Czas ' + 'oczekiwania: ' + *{form.time} + ' minut'" type="text">
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div sec:authorize="isAuthenticated()">
+				<div class="content-box-large">
+					<h3>Edycja Dania</h3>
+				</div>
+				
+				<div class="content-box-large">
+					<div class="panel-heading">
+						<!--Tytul-->
+						<input class="form-control" placeholder="<TYTUL DANIA WCZYTANY Z BAZY DANYCH>" name="" value="#" type="text">
+					</div>
+					<div class="panel-body">
+						
+						<!--Zdjecie dania-->
+						<div class="col-sm-6">
+							<img class=""  src="static/images/test.jpg" alt="Zdjecie">
+							
+							<button type="submit" class="btn btn-primary">Zmień</button>
+						</div>
+						<!--Edycja Dania-->
+						<div class="col-sm-6">
+							
+							<textarea class="form-control" placeholder="<TXT Z BAZY DANYCH>" name="" value="#" type=""></textarea>
+							<hr>
+							<div class="row">
+								<div class="col-sm-6">
+									<input class="form-control" placeholder="<CZAS OCZEKIWANIA Z BAZY DANYCH>" name="" value="" type="text">
+								</div>
+								<div class="col-sm-6">
+									<input class="form-control" placeholder="<CENA Z BAZY DANYCH>" name="" value="" type="text">
+								</div>
+							</div>
+							<hr>
+							<button type="submit" class="btn btn-primary">Aktualizuj</button>
+						</div>	
+					</div>
+				</div>
+			
+			</div>
+			<!--END POST-->
+		  </div>
+		</div>
+		
+    </div>
+
+    <footer>
+         <div class="container">
+         
+            <div class="copy text-center">
+               Copyright 2016 <a href='#'>Grzegorz Wierzejski, Aleksandra Dyszewska, Kolia Epov</a>
+            </div>
+            
+         </div>
+      </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+
+	
+</body>
+</html>
